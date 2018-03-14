@@ -55,7 +55,6 @@ RemoveDups=function(bowtie_file_csv,fasta_file_csv){
   badz[i]=which(old_fasta_file$V1==removes[i])}
  new_fasta=old_fasta_file[-badz[!is.na(badz)],]
  write.csv(new_fasta,file=paste(fasta_file_csv,"NoDups.csv"))
- return(removes)
 }#end of function
 
 #HOW TO RUN THE FUNCTION
