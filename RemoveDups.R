@@ -18,8 +18,8 @@ RemoveDups=function(bowtie_file_csv,fasta_file_csv){
    outz=1
    while(outz>0){
     outz=0;
-    c=which(aligns[misses,]$V3==lst2)#see what aligns with your lst2
-    d=which(aligns[misses,]$V1==lst2)
+    c=which(aligns[misses,]$V3%in%lst2)#see what aligns with your lst2
+    d=which(aligns[misses,]$V1%in%lst2)
     
     #what are in those sets?
     
