@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2018 RemoveDups.R
+Copyright (c) 2018 Ingrid B. Spies
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "RemoveDups.R" function), to deal
