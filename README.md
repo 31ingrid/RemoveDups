@@ -39,7 +39,7 @@ Now align the database with the fasta file to look for duplicate sequences.
 
 NOTE: v tells # of mismatches regardless of quality, -f fasta, -q FASTQ (.fq I think), -r is for raw data (.fq.gz although it was already process_radtags) -p number of processors, -k the number of valid alignments to report.
 
-5. The file DATA_alignments.txt contains bowtie alignments; which loci match other loci. Most of the alignments are between loci and themselves, but there are matches. These duplicates need to be removed.  The function RemoveDups finds duplicates, as well as triplicates, and clusters of loci of any size that exist in the data. Then it removes all but one of the loci and saves it in a new .csv file that is the name of your initial fasta file with “NoDups” appended to the end.
+5. The file DATA_alignments.txt contains bowtie alignments; which loci match other loci. Most of the alignments are between loci and themselves, but there are matches. These duplicates need to be removed.  The function RemoveDups finds duplicates, as well as triplicates, and clusters of loci of any size that exist in the data. Then it removes all but one of the loci and saves it in a new .csv file that is the name of your initial fasta file with “NoDups” appended to the end. This file should not have a header (first row). Delete it if it is there.
 
 The code is in R, and it is a function called RemoveDups. It takes the name of the bowtie output file (that has been converted to .csv format) and a fasta file with duplicates (that has been converted to .csv) and can be run as follows:
 
