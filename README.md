@@ -43,9 +43,11 @@ NOTE: v tells # of mismatches regardless of quality, -f fasta, -q FASTQ (.fq I t
 
 The code is in R, and it is a function called RemoveDups. It takes the name of the bowtie output file (that has been converted to .csv format) and a fasta file with duplicates (that has been converted to .csv) and can be run as follows:
 
-RemoveDups("DATA_alignments.csv"," DATA_output_haps.csv")
+RemoveDups("DATA_alignments.csv","DATA_output_haps.csv")
 
-Do not bother removing the first 6 bases because they help aligning sequences later on.
+These two example files (DATA_alignments.csv and DATA_output_haps.csv) have been included to use for testing. They are shortened versions of actual data files. Generally RADseq data will produce much larger datasets so the code may need to run for ~10 minutes.
+
+Do not bother removing barcodes if you have them because they help aligning sequences later on.
 
 The output will be called DATA_output_haps_noDups.csv. Convert it to DATA_output_haps_noDups.fa with a text editor.  Then this can be used to create a new bowtie database that can be used to set up a second round of stacks that has no repeated loci.
 
